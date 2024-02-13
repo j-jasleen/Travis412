@@ -16,5 +16,6 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calc1 = new SimpleCalculator();
 		assertEquals(calc1.minus(5, 3), 2);
 	}
+	
 	}
 
