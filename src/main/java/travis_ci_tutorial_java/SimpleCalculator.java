@@ -10,6 +10,9 @@ public class SimpleCalculator {
 	public int multiply(int e, int f) {
 		return e * f;
 		}
+	public int divide(int g, int h) {
+		return g/h;
+		}
 }
 
 
