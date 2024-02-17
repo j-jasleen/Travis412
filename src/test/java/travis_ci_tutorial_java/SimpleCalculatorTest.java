@@ -15,23 +15,11 @@ public class SimpleCalculatorTest {
 		assertEquals(calc3.divide(6, 3), 2);
 	}
 
-	@Test
+	@Test(expected = ArithmeticException.class)
 	public void testDivideByZero() {
 		SimpleCalculator calcByZero = new SimpleCalculator();
-		assertEquals(calcByZero.divide(6, 0), "Undefined");
 
-	}
-
-	@Test
-	public void testAdd() {
-		SimpleCalculator calc = new SimpleCalculator();
-		assertEquals(calc.add(1, 1), 2);
-	}
-
-	@Test
-	public void testMinus() {
-		SimpleCalculator calc1 = new SimpleCalculator();
-		assertEquals(calc1.minus(5, 3), 2);
+		calcByZero.divide(6, 0);
 	}
 
 	// Test Multiply
@@ -53,5 +41,17 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calcNeg = new SimpleCalculator();
 		assertEquals(calcNeg.multiply(10, -3), -30);
 	}
+//Previous
 
+	@Test
+	public void testAdd() {
+		SimpleCalculator calc = new SimpleCalculator();
+		assertEquals(calc.add(1, 1), 2);
+	}
+
+	@Test
+	public void testMinus() {
+		SimpleCalculator calc1 = new SimpleCalculator();
+		assertEquals(calc1.minus(5, 3), 2);
+	}
 }
